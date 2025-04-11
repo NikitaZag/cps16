@@ -1,0 +1,33 @@
+$pink: #FF3E79;
+$gray: #FFFFFF;
+$gray2: #eaeaea;
+$gray3:#7E7E82;
+$gray4:#B5B6BC;
+$guyabano: #f8f8f8;
+
+.navigation{
+    &__list{
+      display: flex;
+      list-style-type: none;
+      overflow: scroll;
+      white-space: nowrap;
+      padding-bottom: 8px;
+      margin-left: -10px;
+    }
+    &__item{
+      font-weight: 500;
+      padding: 8px 9px 8px 16px;
+      width: auto;
+    }
+
+    &__item:hover{
+      border-radius: 6px;
+      background: $gray;
+      border: 2px solid #B8FFEC;
+    }
+    &__item > a{
+      text-decoration: none;
+      color: $gray3;
+    }
+}
+
