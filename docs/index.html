@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <title>1.6   Загороднюк</title>
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/TTLakes/stylesheet.css">
@@ -63,20 +64,19 @@
         <div class="content">
             <header class="header">
                 <div class="header__wrapper">
-                    <button type="button" class="round-button header__button-burger">
-                    </button>
+                    <button type="button" class="round-button header__button-burger"><img class="menu-mobile__logo menu__ic" src="img/icons/burger.svg" alt="звонок"></button>
                     <div class="divider header__divider-logo"></div>
                     <a href="#"><img class="header__logo" src="img/logo.png" alt="Логотип компании"></a>
                 </div>
                 <div class="header__wrapper">
                     <div class="buttons-connections">
-                        <button type="button" class="round-button buttons-connections__call"><img class="menu-mobile__logo" src="img/icons/call.svg" alt="звонок"></button>
-                        <button type="button" class="round-button buttons-connections__feedback"><img class="menu-mobile__logo" src="img/icons/chat.svg" alt="обратная связь"></button>
-                        <button type="button" class="round-button buttons-connections__profile"><img class="menu-mobile__logo" src="img/icons/profile.svg" alt="Профиль"></button>
+                        <button type="button" class="round-button buttons-connections__call"><img class="menu-mobile__logo menu__ic" src="img/icons/call.svg" alt="звонок"></button>
+                        <button type="button" class="round-button buttons-connections__feedback"><img class="menu-mobile__logo menu__ic" src="img/icons/chat.svg" alt="обратная связь"></button>
+                        <button type="button" class="round-button buttons-connections__profile"><img class="menu-mobile__logo menu__ic" src="img/icons/profile.svg" alt="Профиль"></button>
                     </div>
                     <div class="divider header__divider-button"></div>
-                    <button type="button" class="round-button header__button-repair"><img class="menu-mobile__logo" src="img/icons/repair.svg" alt=""></button>
-                    <button type="button" class="round-button header__button-status"><img class="menu-mobile__logo" src="img/icons/checkstatus.svg" alt=""></button>
+                    <button type="button" class="round-button header__button-repair"><img class="menu-mobile__logo menu__ic" src="img/icons/repair.svg" alt=""></button>
+                    <button type="button" class="round-button header__button-status"><img class="menu-mobile__logo menu__ic" src="img/icons/checkstatus.svg" alt=""></button>
                 </div>
             </header>
             <header class="header-desktop">
@@ -108,22 +108,24 @@
             <main class="main">
                 <div class="services">
                     <div class="services__wrapper">
-                        <p class="services__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-                           Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
-                           Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-                           что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
-                           в свою очередь, советуют нас родным и близким.
-                           Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-                           что подтверждает большое количество постоянных клиентов. <br><br>Мы гордимся тем, что к нам обращаются по рекомендациям и,
-                           в свою очередь, советуют нас родным и близким.Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-                           что подтверждает большое количество постоянных клиентов.<br> Мы гордимся тем, что к нам обращаются по рекомендациям и,
-                           в свою очередь, советуют нас родным и близким.
+                      <p class="services__text" id="services-text">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                        Только у нас Вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                        что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                        в свою очередь, советуют нас родным и близким.
 
-                        </p>
-                        <button type="button" class="services__button button-unwrap">
-                          <img src="img/icons/icon.svg" class="button-unwrap__arrow" >
-                            <span class="button-unwrap__text">Читать далее</span>
-                        </button>
+                        <span id="more-text" style="display: none;">
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                            что подтверждает большое количество постоянных клиентов. <br><br>
+                            Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                            в свою очередь, советуют нас родным и близким.
+                        </span>
+                    </p>
+                    <button type="button" class="services__button button-unwrap" id="toggle-button">
+                        <span class="button-unwrap__text" id="button-text">Читать далее</span>
+                    </button>
+                    </button>
                     </div>
                     <img class="services__image" src="./img/image.png" alt="Изображение фирмы">
                 </div>
@@ -134,67 +136,67 @@
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-lenovo.png" alt="Lenovo">
-                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow" alt=""></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-samsung.png" alt="samsung">
-                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow" alt=""></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-apple.png" alt="apple">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-sonic.png" alt="viewsonic">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-bosch.png" alt="bosch">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fix__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-hp.png" alt="hp">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-acer.png" alt="acer">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-sony.png" alt="sony">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-lenovo.png" alt="Lenovo">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-samsung.png" alt="samsung">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                                 <div class="fixed__wrap swiper-slide">
                                     <div class="fixed__item">
                                         <img class="fixed__image" src="./img/icons/icon-apple.png" alt="apple">
-                                        <button class="fixed__button round-button"></button>
+                                        <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -206,96 +208,97 @@
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-lenovo.png" alt="Lenovo">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-samsung.png" alt="samsung">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-apple.png" alt="apple">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-sonic.png" alt="viewsonic">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-bosch.png" alt="bosch">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-hp.png" alt="hp">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-acer.png" alt="acer">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-sony.png" alt="sony">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-lenovo.png" alt="Lenovo">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-samsung.png" alt="samsung">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-apple.png" alt="apple">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap fixed__hidden">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-sonic.png" alt="viewsonic">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap fixed__hidden">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-bosch.png" alt="bosch">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap fixed__hidden">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-hp.png" alt="hp">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="fixed__wrap fixed__hidden">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-acer.png" alt="acer">
-                                    <button class="fixed__button round-button"></button>
+                                    <button class="fixed__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <button class="fixed__toggle button-unwrap">
+
                         <span class="button-unwrap__text">Показать все</span>
                     </button>
                 </section>
@@ -306,61 +309,61 @@
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт планшетов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ПК</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт маниторов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт планшетов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ремонт ПК</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт мониторов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap swiper-slide">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт планшетов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                         </div>
@@ -371,72 +374,72 @@
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ПК</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
-                            <div class="repair-type__wrap">
+                            <div class="repair-type__wrap ">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт мониторов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт планшетовв</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ПК</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт мониторов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                             <div class="repair-type__wrap">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт планшетов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
-                            <div class="repair-type__wrap repair-type__hidden">
+                            <div class="repair-type__wrap  ">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ПК</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
-                            <div class="repair-type__wrap repair-type__hidden">
+                            <div class="repair-type__wrap  ">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт мониторов</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
-                            <div class="repair-type__wrap repair-type__hidden">
+                            <div class="repair-type__wrap  ">
                                 <div class="repair-type__item">
                                     <p class="repair-type__text">Ремонт ноутбуков</p>
-                                    <button class="repair-type__button round-button"></button>
+                                    <button class="repair-type__button round-button"><img src="img/icons/arrow.svg" class="button-unwrap__arrow button-fix" alt=""></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="repair-type__toggle button-unwrap">
+                    <button class="repair-type__toggle button-unwrap" id="show-more">
                         <span class="button-unwrap__text">Показать все</span>
                     </button>
                 </section>
@@ -459,7 +462,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +481,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -497,7 +500,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -516,7 +519,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -535,7 +538,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -554,7 +557,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -573,7 +576,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -592,7 +595,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -611,7 +614,7 @@
                                             <p class="prices__subtitle">Срок</p>
                                             <p class="prices__description">30-120 мин</p>
                                         </div>
-                                        <button type="button" class="prices__button round-button">Заказать</button>
+                                        <button type="button" class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                                     </div>
                                 </div>
                             </div>
@@ -629,31 +632,31 @@
                                 <p class="prices__elem">Диагностика</p>
                                 <p class="prices__elem">Бесплатно</p>
                                 <p class="prices__elem">30 мин</p>
-                                <button class="prices__button round-button">Заказать</button>
+                                <button class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                             </div>
                             <div class="prices__row">
                                 <p class="prices__elem">Замена дисплея</p>
                                 <p class="prices__elem">1 000 ₽</p>
                                 <p class="prices__elem">30-120 мин</p>
-                                <button class="prices__button round-button">Заказать</button>
+                                <button class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                             </div>
                             <div class="prices__row">
                                 <p class="prices__elem">Замена полифонического динамика</p>
                                 <p class="prices__elem">1 000 ₽</p>
                                 <p class="prices__elem">30-120 мин</p>
-                                <button class="prices__button round-button">Заказать</button>
+                                <button class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                             </div>
                             <div class="prices__row">
                                 <p class="prices__elem">Тестирование с выдачей технического заключения</p>
                                 <p class="prices__elem">1 000 ₽</p>
                                 <p class="prices__elem">30-120 мин</p>
-                                <button class="prices__button round-button">Заказать</button>
+                                <button class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                             </div>
                             <div class="prices__row">
                                 <p class="prices__elem">Замена программного обеспечения</p>
                                 <p class="prices__elem">1 000 ₽</p>
                                 <p class="prices__elem">30-120 мин</p>
-                                <button class="prices__button round-button">Заказать</button>
+                                <button class="prices__button round-button">Заказать<img src="img/icons/ones-arrow.svg" class="button-unwrap__arrow button__mobil-fix" alt=""></button>
                             </div>
                         </div>
                     </div>
@@ -690,7 +693,7 @@
                 <button type="submit" class="call__submit round-button" name="submit">Отправить</button>
             </form>
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="./js/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/docs/js/bundle.js"></script>
   </body>
 </html>
