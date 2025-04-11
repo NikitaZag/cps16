@@ -3,11 +3,11 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
         <title>1.6   Загороднюк</title>
-    </head>
+    <link href="/style.css" rel="stylesheet"></head>
     <body>
         <article class="menu menu-mobile">
             <h3>Ремонт техники, Сервис по ремнту техники</h3>
@@ -39,22 +39,20 @@
                 <a class="menu-mobile__email" href="mailto:mail@cps.com">mail@cps.com</a>
                 <a class="menu-mobile__tel" href="tel:+88008908900">8 800 890 8900</a>
                 <ul class="menu-mobile__lang">
-                  <!-- <li class="lang__ru"><a class="link_ru" href="#"></a>RU</li>
-                  <li class="lang__en"><a class="link_en" href="#"></a>EN</li>
-                  <li class="lang__ch"><a class="link_ch" href="#"></a>CH</li> -->
+                  
                   <li class="lang__ru">
                       <label class="radio__button">
-                      <input checked type="radio" class="radio__button_click"  name="radio__selector"><span class="radio__cont">RU</span>
+                      <input checked="checked" type="radio" class="radio__button_click" name="radio__selector"><span class="radio__cont">RU</span>
                       </label>
                     </li>
                     <li class="lang__ru">
                       <label class="radio__button">
-                        <input type="radio" class="radio__button_click"  name="radio__selector"><span class="radio__cont">EN</span>
+                        <input type="radio" class="radio__button_click" name="radio__selector"><span class="radio__cont">EN</span>
                       </label>
                     </li>
                     <li class="lang__ru">
                       <label class="radio__button">
-                        <input type="radio" class="radio__button_click"  name="radio__selector"><span class="radio__cont">CH</span>
+                        <input type="radio" class="radio__button_click" name="radio__selector"><span class="radio__cont">CH</span>
                       </label>
                     </li>
               </ul>
@@ -63,7 +61,7 @@
         <div class="content">
             <header class="header">
                 <div class="header__wrapper">
-                    <button type="button" class="round-button header__button-burger ">
+                    <button type="button" class="round-button header__button-burger">
                     </button>
                     <div class="divider header__divider-logo"></div>
                     <a href="#"><img class="header__logo" src="img/logo.png" alt="Логотип компании"></a>
@@ -84,11 +82,11 @@
                 <div class="header-desktop__wrapper">
                     <div class="header-desktop__button">
                         <p>Оставить заявку</p>
-                        <button type="button" class=" round-button header__button-repair"></button>
+                        <button type="button" class="round-button header__button-repair"></button>
                     </div>
                     <div class="header-desktop__button">
                         <p>Статус ремонта</p>
-                        <button type="button" class=" round-button buttons-connections__feedback"></button>
+                        <button type="button" class="round-button buttons-connections__feedback"></button>
                     </div>
                 </div>
             </header>
@@ -238,25 +236,25 @@
                                     <button class="fixed__button round-button"></button>
                                 </div>
                             </div>
-                            <div class="fixed__wrap ">
+                            <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-acer.png" alt="acer">
                                     <button class="fixed__button round-button"></button>
                                 </div>
                             </div>
-                            <div class="fixed__wrap ">
+                            <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-sony.png" alt="sony">
                                     <button class="fixed__button round-button"></button>
                                 </div>
                             </div>
-                            <div class="fixed__wrap ">
+                            <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-lenovo.png" alt="Lenovo">
                                     <button class="fixed__button round-button"></button>
                                 </div>
                             </div>
-                            <div class="fixed__wrap ">
+                            <div class="fixed__wrap">
                                 <div class="fixed__item">
                                     <img class="fixed__image" src="./img/icons/icon-samsung.png" alt="samsung">
                                     <button class="fixed__button round-button"></button>
@@ -441,7 +439,7 @@
                 </section>
                 <section class="prices">
                     <h2 class="h2 prices__h2">Цены на услуги</h2>
-                    <div class="prices__mobile  swiper">
+                    <div class="prices__mobile swiper">
                         <div class="prices__container swiper-wrapper">
                             <div class="prices__wrap swiper-slide">
                                 <div class="prices__item">
@@ -672,10 +670,10 @@
             <button type="button" class="feedback__button round-button"></button>
             <h2 class="feedback__h2 h1">Обратная связь</h2>
             <form action="#" class="feedback__inputs">
-                <input type="text" name="name" id="name" class="feedback__name" placeholder="Имя" required />
-                <input type="tel" name="tel" id="tel-number" placeholder="Телефон" class="feedback__tel" required />
-                <input type="email" name="email" id="email" placeholder="Электронная почта" class="feedback__email" required />
-                <textarea cols="40" rows="5" placeholder="Сообщение" class="feedback__area"required></textarea>
+                <input type="text" name="name" id="name" class="feedback__name" placeholder="Имя" required>
+                <input type="tel" name="tel" id="tel-number" placeholder="Телефон" class="feedback__tel" required>
+                <input type="email" name="email" id="email" placeholder="Электронная почта" class="feedback__email" required>
+                <textarea cols="40" rows="5" placeholder="Сообщение" class="feedback__area" required></textarea>
                 <p class="feedback__text">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
                 <button type="submit" class="feedback__submit round-button" name="submit">Отправить</button>
             </form>
@@ -684,11 +682,11 @@
             <button type="button" class="call__button round-button"></button>
             <h2 class="call__h2 h1">Заказать звонок</h2>
             <form action="#" class="call__inputs">
-                <input type="tel" name="tel" id="tel-call" placeholder="Телефон" class="call__tel" required />
+                <input type="tel" name="tel" id="tel-call" placeholder="Телефон" class="call__tel" required>
                 <p class="call__text">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
                 <button type="submit" class="call__submit round-button" name="submit">Отправить</button>
             </form>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    </body>
+    <script type="text/javascript" src="/./js/bundle.js"></script></body>
 </html>
