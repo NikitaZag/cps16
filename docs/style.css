@@ -62,7 +62,7 @@ ul, li, a, button {
   line-height: 40px;
   padding-left: 12px; }
   .h1::before {
-    content: url("../static/highlight.svg");
+    content: url("../docs/img/icons/highlight.svg");
     position: relative;
     left: -11px; }
 
@@ -236,7 +236,7 @@ input[type="radio"] {
   background-position: center; }
 
 .buttons-connections__call {
-  background-image: url("../static/call.svg");
+  background-image: url("../docs/img/icons/call.svg");
   background-repeat: no-repeat;
   background-position: center; }
 
